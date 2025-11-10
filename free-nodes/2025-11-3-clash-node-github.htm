@@ -271,9 +271,29 @@ A：定期运行 <code data-start="2782" data-end="2795">opkg update</code> 和 
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>SSR 的混淆插件有什么作用？</h5></div>
+    <div class="panel-body">
+        混淆插件用于伪装流量，使其看起来像普通的 HTTP 或 TLS 请求。常见类型有 plain、tls1.2_ticket_auth 等。合理设置混淆能有效降低被识别的风险，提升连接成功率。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Matsuri 的节点测速结果能影响策略组吗？</h5></div>
+    <div class="panel-body">
+        可以。Matsuri 会将延迟最低的节点自动标记为优先节点，结合策略组，程序会优先选择最佳节点处理流量，保证访问速度和连接稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Vmess 的安全加密方式推荐使用哪种？</h5></div>
+    <div class="panel-body">
+        目前推荐使用 auto 或 none（结合 TLS 加密）以提升性能。旧版 AEAD 加密已被废弃，使用 TLS/XTLS 层提供的加密即可确保安全。过度加密反而增加 CPU 占用与延迟。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>QuantumultX 可以按协议类型分流吗？</h5></div>
     <div class="panel-body">
         支持。用户可按 TCP、UDP 或特定应用协议分流流量，结合策略组，实现游戏加速、视频优化或广告屏蔽等定制化网络策略，提高访问速度和稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>QuantumultX 分流规则如何优化游戏体验？</h5></div>
+    <div class="panel-body">
+        QuantumultX 可按端口、协议或应用设置分流规则，将游戏流量走低延迟节点。结合策略组自动切换，可保证游戏连接稳定，减少掉线和延迟，提高流畅度。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Surfboard 是否支持应用分流？</h5></div>
@@ -286,19 +306,9 @@ A：定期运行 <code data-start="2782" data-end="2795">opkg update</code> 和 
         TUN 模式拦截系统 IP 层流量，实现全局代理；SOCKS5 代理通常只影响特定应用。TUN 更适合全局加速、游戏和视频应用，保证所有流量走节点，提高网络稳定性和速度。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 如何按端口匹配流量分配节点？</h5></div>
+    <div class="panel-heading"><h5>Matsuri 支持哪些传输方式？</h5></div>
     <div class="panel-body">
-        Sing-box 支持按端口匹配流量，将不同应用的流量分配到指定节点。结合策略组使用，可实现精准分流，优化访问速度和网络稳定性，提高整体网络体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>QuantumultX 分流规则如何优化游戏体验？</h5></div>
-    <div class="panel-body">
-        QuantumultX 可按端口、协议或应用设置分流规则，将游戏流量走低延迟节点。结合策略组自动切换，可保证游戏连接稳定，减少掉线和延迟，提高流畅度。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 的混淆插件有什么作用？</h5></div>
-    <div class="panel-body">
-        混淆插件用于伪装流量，使其看起来像普通的 HTTP 或 TLS 请求。常见类型有 plain、tls1.2_ticket_auth 等。合理设置混淆能有效降低被识别的风险，提升连接成功率。<hr />    </div>
+        Matsuri 支持 TCP、gRPC、QUIC、WebSocket 等多种传输协议。用户可在配置文件中自由切换，根据服务器支持情况选择最优连接方式，以获得更低延迟与更强稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>如何给 Clash 或 Sing-box 添加本地广告屏蔽规则？</h5></div>
@@ -306,19 +316,9 @@ A：定期运行 <code data-start="2782" data-end="2795">opkg update</code> 和 
         可导入公共广告域名列表（如 ads、trackers）并将其指向 `REJECT` 或 `DIRECT`（根据需求）；还可以使用 rule-provider 自动更新广告规则，并结合 hosts 或 DNS 层面进行联合拦截以提升屏蔽效果。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Vmess 的安全加密方式推荐使用哪种？</h5></div>
+    <div class="panel-heading"><h5>Sing-box 如何按端口匹配流量分配节点？</h5></div>
     <div class="panel-body">
-        目前推荐使用 auto 或 none（结合 TLS 加密）以提升性能。旧版 AEAD 加密已被废弃，使用 TLS/XTLS 层提供的加密即可确保安全。过度加密反而增加 CPU 占用与延迟。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 支持哪些传输方式？</h5></div>
-    <div class="panel-body">
-        Matsuri 支持 TCP、gRPC、QUIC、WebSocket 等多种传输协议。用户可在配置文件中自由切换，根据服务器支持情况选择最优连接方式，以获得更低延迟与更强稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 的节点测速结果能影响策略组吗？</h5></div>
-    <div class="panel-body">
-        可以。Matsuri 会将延迟最低的节点自动标记为优先节点，结合策略组，程序会优先选择最佳节点处理流量，保证访问速度和连接稳定性。    </div>
+        Sing-box 支持按端口匹配流量，将不同应用的流量分配到指定节点。结合策略组使用，可实现精准分流，优化访问速度和网络稳定性，提高整体网络体验。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -347,16 +347,16 @@ A：定期运行 <code data-start="2782" data-end="2795">opkg update</code> 和 
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-10-11-clash-verge-rev-nodes.htm" title="Clash节点分享 - 10月11日20.6M/S|免费Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/SSR节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 10月11日20.6M/S|免费Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/SSR节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-23-clash-meta-github.htm" title="Clash节点分享 - 10月23日18.9M/S|免费SSR节点/Singbox节点/V2ray节点/Clash节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 10月23日18.9M/S|免费SSR节点/Singbox节点/V2ray节点/Clash节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-18-clash-v2ray-ss-ssr.htm" title="Clash节点分享 - 10月18日20.3M/S|免费V2ray节点/SSR节点/Singbox节点/Clash节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 10月18日20.3M/S|免费V2ray节点/SSR节点/Singbox节点/Clash节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-3-clash-node-github.htm" title="Clash节点分享 - 11月3日21.7M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 11月3日21.7M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-27-clash-verge-rev-node-github.htm" title="Clash节点分享 - 10月27日19M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/SSR节点/Clash节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 10月27日19M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/SSR节点/Clash节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-3-clash-node.htm" title="Clash节点分享 - 10月3日19M/S|免费V2ray节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 10月3日19M/S|免费V2ray节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-22-clash-stash-node.htm" title="Clash节点分享 - 10月22日21.3M/S|免费Clash节点/SSR节点/Singbox节点/V2ray节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 10月22日21.3M/S|免费Clash节点/SSR节点/Singbox节点/V2ray节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-15-clash-v2ray-ss-ssr.htm" title="Clash节点分享 - 10月15日18.8M/S|免费Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 10月15日18.8M/S|免费Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-8-clash-v2ray-ss-ssr.htm" title="Clash节点分享 - 10月8日21.6M/S|免费SSR节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 10月8日21.6M/S|免费SSR节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-10-clash-verge-rev-github.htm" title="Clash节点分享 - 11月10日23M/S|免费SSR节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 11月10日23M/S|免费SSR节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-5-clash-stash.htm" title="Clash节点分享 - 11月5日22.9M/S|免费Clash节点/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 11月5日22.9M/S|免费Clash节点/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-1-clash-v2ray-ss-ssr.htm" title="Clash节点分享 - 11月1日19.4M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Singbox节点/Clash节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 11月1日19.4M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Singbox节点/Clash节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-4-free-node-subscribe.htm" title="Clash节点分享 - 10月4日20.1M/S|免费Singbox节点/V2ray节点/SSR节点/Clash节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 10月4日20.1M/S|免费Singbox节点/V2ray节点/SSR节点/Clash节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-9-clash-verge-rev-node.htm" title="Clash节点分享 - 10月9日22.2M/S|免费Singbox节点/Shadowrocket节点/Clash节点/V2ray节点/SSR节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 10月9日22.2M/S|免费Singbox节点/Shadowrocket节点/Clash节点/V2ray节点/SSR节点节点推荐，V2rayC梯子购买推荐</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-10-25-clash-v2ray-ss-ssr.htm" title="Clash节点分享 - 10月25日20.5M/S|免费Singbox节点/SSR节点/Clash节点/Shadowrocket节点/V2ray节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 10月25日20.5M/S|免费Singbox节点/SSR节点/Clash节点/Shadowrocket节点/V2ray节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-19-node-share.htm" title="Clash节点分享 - 10月19日22.6M/S|免费Clash节点/V2ray节点/Singbox节点/SSR节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 10月19日22.6M/S|免费Clash节点/V2ray节点/Singbox节点/SSR节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-15-clash-v2ray-ss-ssr.htm" title="Clash节点分享 - 10月15日18.8M/S|免费Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 10月15日18.8M/S|免费Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-6-clash-node.htm" title="Clash节点分享 - 10月6日18.4M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Clash节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 10月6日18.4M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Clash节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-18-clash-v2ray-ss-ssr.htm" title="Clash节点分享 - 10月18日20.3M/S|免费V2ray节点/SSR节点/Singbox节点/Clash节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 10月18日20.3M/S|免费V2ray节点/SSR节点/Singbox节点/Clash节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐</a></li>
                     </ul>
     </div>
 </div>
@@ -368,7 +368,7 @@ A：定期运行 <code data-start="2782" data-end="2795">opkg update</code> 和 
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <h4><span class="badge" style="float: right;">10</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-10/" title="2025-10 归档">2025-10</a></h4>
