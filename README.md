@@ -1,4 +1,4 @@
-# Clash节点分享 - 1月30日22.7M/S|免费Shadowrocket节点/V2ray节点/Singbox节点/Clash节点/SSR节点节点推荐，V2rayC梯子购买推荐  更新时间 2026-01-30 12:28:59
+# Clash节点分享 - 2月6日21.7M/S|免费V2ray节点/Singbox节点/SSR节点/Clash节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐  更新时间 2026-02-06 10:44:51
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://nodeclashshare.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://nodeclashshare.github.io/uploads/2026/01/0-20260130.yaml
-- https://nodeclashshare.github.io/uploads/2026/01/1-20260130.yaml
-- https://nodeclashshare.github.io/uploads/2026/01/2-20260130.yaml
-- https://nodeclashshare.github.io/uploads/2026/01/3-20260130.yaml
-- https://nodeclashshare.github.io/uploads/2026/01/4-20260130.yaml
+- https://nodeclashshare.github.io/uploads/2026/02/0-20260206.yaml
+- https://nodeclashshare.github.io/uploads/2026/02/1-20260206.yaml
+- https://nodeclashshare.github.io/uploads/2026/02/2-20260206.yaml
+- https://nodeclashshare.github.io/uploads/2026/02/3-20260206.yaml
+- https://nodeclashshare.github.io/uploads/2026/02/4-20260206.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://nodeclashshare.github.io/uploads/2026/01/0-20260130.txt
-- https://nodeclashshare.github.io/uploads/2026/01/1-20260130.txt
-- https://nodeclashshare.github.io/uploads/2026/01/2-20260130.txt
-- https://nodeclashshare.github.io/uploads/2026/01/3-20260130.txt
-- https://nodeclashshare.github.io/uploads/2026/01/4-20260130.txt
+- https://nodeclashshare.github.io/uploads/2026/02/0-20260206.txt
+- https://nodeclashshare.github.io/uploads/2026/02/1-20260206.txt
+- https://nodeclashshare.github.io/uploads/2026/02/2-20260206.txt
+- https://nodeclashshare.github.io/uploads/2026/02/3-20260206.txt
+- https://nodeclashshare.github.io/uploads/2026/02/4-20260206.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://nodeclashshare.github.io/uploads/2026/01/20260130.json
+- https://nodeclashshare.github.io/uploads/2026/02/20260206.json
 
 ## 更多Clash节点订阅 ：
 
