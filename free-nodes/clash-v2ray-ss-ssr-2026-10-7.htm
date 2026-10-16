@@ -324,14 +324,24 @@ opkg install v2ray-core
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 支持订阅更新吗？</h5></div>
+    <div class="panel-heading"><h5>Netch 使用 TAP 驱动时 Windows 弹出网络变更提示，该如何处理？</h5></div>
     <div class="panel-body">
-        支持。Matsuri 内置订阅更新模块，可自动检测链接变化并定期刷新节点。用户还可手动点击更新按钮同步最新配置，保持网络连接的可用性与速度。<hr />    </div>
+        这是正常现象，TAP 虚拟网卡会改变系统网络状态。建议在首次启用时允许驱动安装并授予网络权限，若频繁弹窗可在网络设置中调整网络识别类型或将 TAP 设为非计量连接。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 的多出口策略有什么作用？</h5></div>
+    <div class="panel-body">
+        多出口策略允许不同流量通过不同节点访问。例如视频流量通过高速节点，普通网页使用备用节点，实现资源优化与智能分流，提高网络使用体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>V2Ray 如何通过策略组优化访问速度？</h5></div>
     <div class="panel-body">
         策略组允许用户将节点按延迟、地域或用途分组。结合路由规则，V2Ray 会自动选择最优节点处理流量，提升访问速度并降低延迟，尤其在访问海外网站时效果明显。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>如何更新 Clash 的订阅节点？</h5></div>
+    <div class="panel-body">
+        在 Clash 中更新订阅节点，只需在配置页面中点击“Update”或“Refresh”按钮即可。系统会重新下载订阅链接中的内容，自动替换旧节点。这样能确保用户随时获取最新可用节点，避免连接失败或延迟过高。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VMess AEAD 加密在高封锁地区的优势？</h5></div>
@@ -344,24 +354,9 @@ opkg install v2ray-core
         WinXray 会定期检测节点延迟，结合策略组自动切换到低延迟节点。保证网页、视频和游戏流量通过最佳节点，提高访问速度和连接稳定性，减少掉线和卡顿。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Netch 使用 TAP 驱动时 Windows 弹出网络变更提示，该如何处理？</h5></div>
+    <div class="panel-heading"><h5>Matsuri 支持订阅更新吗？</h5></div>
     <div class="panel-body">
-        这是正常现象，TAP 虚拟网卡会改变系统网络状态。建议在首次启用时允许驱动安装并授予网络权限，若频繁弹窗可在网络设置中调整网络识别类型或将 TAP 设为非计量连接。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 的多出口策略有什么作用？</h5></div>
-    <div class="panel-body">
-        多出口策略允许不同流量通过不同节点访问。例如视频流量通过高速节点，普通网页使用备用节点，实现资源优化与智能分流，提高网络使用体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS + XTLS 在移动网络的优势？</h5></div>
-    <div class="panel-body">
-        XTLS 模式减少握手次数和加密开销，适合高延迟或不稳定的移动网络。结合策略组和多节点切换，可提升网页浏览、视频播放和游戏的连接稳定性和流畅度。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 的 Reality 功能是什么？</h5></div>
-    <div class="panel-body">
-        Reality 是 V2Ray 新增的伪装技术，可替代传统 TLS。它无需真实证书，通过公钥验证机制实现端到端加密。相比 Trojan 的 HTTPS 伪装方式，Reality 更轻量、安全且配置更简洁。<hr />    </div>
+        支持。Matsuri 内置订阅更新模块，可自动检测链接变化并定期刷新节点。用户还可手动点击更新按钮同步最新配置，保持网络连接的可用性与速度。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Hiddify Next 用户流量配额如何设置？</h5></div>
@@ -369,9 +364,14 @@ opkg install v2ray-core
         管理员可为每个用户设置带宽和流量上限，超出限制可自动降速或阻止访问，保证服务器资源合理分配，避免单用户占用过多带宽，提高整体网络公平性和使用效率。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>如何更新 Clash 的订阅节点？</h5></div>
+    <div class="panel-heading"><h5>V2Ray 的 Reality 功能是什么？</h5></div>
     <div class="panel-body">
-        在 Clash 中更新订阅节点，只需在配置页面中点击“Update”或“Refresh”按钮即可。系统会重新下载订阅链接中的内容，自动替换旧节点。这样能确保用户随时获取最新可用节点，避免连接失败或延迟过高。    </div>
+        Reality 是 V2Ray 新增的伪装技术，可替代传统 TLS。它无需真实证书，通过公钥验证机制实现端到端加密。相比 Trojan 的 HTTPS 伪装方式，Reality 更轻量、安全且配置更简洁。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VLESS + XTLS 在移动网络的优势？</h5></div>
+    <div class="panel-body">
+        XTLS 模式减少握手次数和加密开销，适合高延迟或不稳定的移动网络。结合策略组和多节点切换，可提升网页浏览、视频播放和游戏的连接稳定性和流畅度。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -419,16 +419,16 @@ opkg install v2ray-core
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/node-share-2026-9-9.htm" title="Clash节点分享 - 9月9日21.6M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/Trojan节点/SSR节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 9月9日21.6M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/Trojan节点/SSR节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-v2ray-ss-ssr-2026-9-27.htm" title="Clash节点分享 - 9月27日22.4M/S|免费Shadowrocket节点/Trojan节点/V2ray节点/SSR节点/Singbox节点/Clash节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 9月27日22.4M/S|免费Shadowrocket节点/Trojan节点/V2ray节点/SSR节点/Singbox节点/Clash节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-windows-2026-9-13.htm" title="Clash节点分享 - 9月13日20.3M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/Trojan节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 9月13日20.3M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/Trojan节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/clash-node-github-2026-10-5.htm" title="Clash节点分享 - 10月5日18.9M/S|免费V2ray节点/Trojan节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 10月5日18.9M/S|免费V2ray节点/Trojan节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-28-clash-meta-github.htm" title="Clash节点分享 - 9月28日21.6M/S|免费Trojan节点/Clash节点/V2ray节点/SSR节点/Shadowrocket节点/Singbox节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 9月28日21.6M/S|免费Trojan节点/Clash节点/V2ray节点/SSR节点/Shadowrocket节点/Singbox节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-18-clash-meta-github.htm" title="Clash节点分享 - 9月18日21.9M/S|免费Singbox节点/SSR节点/Clash节点/V2ray节点/Trojan节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 9月18日21.9M/S|免费Singbox节点/SSR节点/Clash节点/V2ray节点/Trojan节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-node-github-2026-10-3.htm" title="Clash节点分享 - 10月3日21.2M/S|免费Shadowrocket节点/Clash节点/Trojan节点/SSR节点/Singbox节点/V2ray节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 10月3日21.2M/S|免费Shadowrocket节点/Clash节点/Trojan节点/SSR节点/Singbox节点/V2ray节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-30-clash-meta-github.htm" title="Clash节点分享 - 9月30日21.2M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/SSR节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 9月30日21.2M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/SSR节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-windows-2026-9-23.htm" title="Clash节点分享 - 9月23日20.8M/S|免费Shadowrocket节点/Singbox节点/Trojan节点/Clash节点/V2ray节点/SSR节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 9月23日20.8M/S|免费Shadowrocket节点/Singbox节点/Trojan节点/Clash节点/V2ray节点/SSR节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-4-clash-meta-github.htm" title="Clash节点分享 - 9月4日19.4M/S|免费Singbox节点/Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Trojan节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 9月4日19.4M/S|免费Singbox节点/Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Trojan节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-windows-2026-9-7.htm" title="Clash节点分享 - 9月7日22.8M/S|免费Clash节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Trojan节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 9月7日22.8M/S|免费Clash节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Trojan节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-v2ray-ss-ssr-2026-9-11.htm" title="Clash节点分享 - 9月11日21.9M/S|免费Trojan节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点/Singbox节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 9月11日21.9M/S|免费Trojan节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点/Singbox节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-github-2026-9-25.htm" title="Clash节点分享 - 9月25日20.2M/S|免费SSR节点/Singbox节点/Trojan节点/Shadowrocket节点/V2ray节点/Clash节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 9月25日20.2M/S|免费SSR节点/Singbox节点/Trojan节点/Shadowrocket节点/V2ray节点/Clash节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-windows-2026-9-5.htm" title="Clash节点分享 - 9月5日21.7M/S|免费V2ray节点/SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/Clash节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 9月5日21.7M/S|免费V2ray节点/SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/Clash节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-6-clash-verge-rev-node-github.htm" title="Clash节点分享 - 10月6日22.2M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点/Trojan节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 10月6日22.2M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点/Trojan节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-2026-9-9.htm" title="Clash节点分享 - 9月9日21.6M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/Trojan节点/SSR节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 9月9日21.6M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/Trojan节点/SSR节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-8-clash-stash-node.htm" title="Clash节点分享 - 10月8日22.2M/S|免费Clash节点/Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/V2ray节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 10月8日22.2M/S|免费Clash节点/Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/V2ray节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-windows-2026-10-13.htm" title="Clash节点分享 - 10月13日20.9M/S|免费Trojan节点/Clash节点/SSR节点/V2ray节点/Singbox节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 10月13日20.9M/S|免费Trojan节点/Clash节点/SSR节点/V2ray节点/Singbox节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-22-clash-node-daily-updates.htm" title="Clash节点分享 - 9月22日20M/S|免费SSR节点/V2ray节点/Singbox节点/Clash节点/Trojan节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐">Clash节点分享 - 9月22日20M/S|免费SSR节点/V2ray节点/Singbox节点/Clash节点/Trojan节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -440,7 +440,7 @@ opkg install v2ray-core
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">8</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
+                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
